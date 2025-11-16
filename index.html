@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Park - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <h1>🏛️ AYALA TRIAGLE 📜</h1>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Now / Appointment</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="learning_center.html">Learning Center (Puzzle)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <h2>✨ The Ayala Triangle Timeline Journey ✨</h2>
+            <p>Step through time and explore the key moments that shaped one of Makati's most iconic and historic locations.</p>
+
+            <div class="slideshow-container">
+
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <div class="slide-number">1 / 5</div>
+                    <img id="gif-element-1" 
+                        data-gif-src="Precolonial.gif" 
+                        data-static-src="Precoloniallast.png" 
+                        data-gif-duration="2000"
+                        src="Precoloniallast.png" 
+                        alt="Precolonial Era" 
+                        style="width:100%">
+                    <div class="slide-text">
+                        <h3>👑 Precolonial Foundations (Pre-1500s)</h3>
+                        <p>The earliest known history: <b>Lakan Tagkan and Bouan</b> ruled the <b>Kingdom of Namayan</b>, which included the area now known as modern Makati. A truly ancient foundation for the land.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <div class="slide-number">2 / 5</div>
+                    <img id="gif-element-2" 
+                        data-gif-src="Ayala1.gif" 
+                        data-static-src="Ayalalast.png" 
+                        data-gif-duration="2000"
+                        src="Ayalalast.png"
+                        alt="Ayala Family Roots" 
+                        style="width:100%">
+                    <div class="slide-text">
+                        <h3>🌳 Ayala Family Roots & Hacienda Era (1830s - 1851)</h3>
+                        <p>The business origins: <b>Domingo Róxas and Antonio de Ayala</b> established the core business group. The purchase of <b>Hacienda San Pedro de Macati</b> by Don José Bonifacio Roxas established the massive estate that would eventually become Makati City.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <div class="slide-number">3 / 5</div>
+                    <img id="gif-element-3" 
+                        data-gif-src="Nielson.gif" 
+                        data-static-src="NielsonField.png" 
+                        data-gif-duration="3000"
+                        src="NielsonField.png" 
+                        alt="Aviation History" 
+                        style="width:100%">
+                    <div class="slide-text">
+                        <h3>✈️ Aviation Beginnings & War Transition (1937 - 1948)</h3>
+                        <p>A landmark era: <b>Nielson Field</b> opened as Manila’s first modern airport. After severe damage in WWII, aviation ceased, but the <b>Zobel family</b> carefully preserved the iconic <b>Nielson Tower</b> as a historical reminder.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <div class="slide-number">4 / 5</div>
+                    <img id="gif-element-4" 
+                        data-gif-src="Protest.gif" 
+                        data-static-src="MakatiStock.png" 
+                        data-gif-duration="2000"
+                        src="MakatiStock.png" 
+                        alt="Commercial Center & Protest" 
+                        style="width:100%">
+                    <div class="slide-text">
+                        <h3>📈 Commercial Center & People Power Era (1960s - 1986)</h3>
+                        <p>The hub of commerce and change: The <b>Makati Stock Exchange Building</b> was completed. Later, <b>Ugarte Field</b> became a vital <b>protest site</b> for civil activism following the Ninoy Aquino assassination, a defining moment in history.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="mySlides fade">
+                    <div class="slide-number">5 / 5</div>
+                    <img id="gif-element-5" 
+                        data-gif-src="Triangle.gif" 
+                        data-static-src="Triangle.png" 
+                        data-gif-duration="2000"
+                        src="Triangle.png" 
+                        alt="Modern Developments" 
+                        style="width:100%">
+                    <div class="slide-text">
+                        <h3>🌳 The Modern Ayala Triangle & Gardens (1990s - 2025)</h3>
+                        <p>A park reborn: Development of <b>Tower One</b> and designation as a <b>PEZA-registered IT Park (2003)</b> cemented its business future. Today, the fully redeveloped <b>Ayala Triangle Gardens</b> hosts the annual Lights Show and boasts modern features, like the <b>Dela Rosa Gardens</b>.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">🔨</a>
+            </div>
+
+            <br>
+
+            <!-- Dots -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <p class="final-cta">Visit the <a href="learning_center.html">Learning Center</a> to try our dynamic color puzzle!</p>
+
+        </section>
+    </main>
+    
+    <script src="slideshow.js"></script> 
+</body>
+</html>

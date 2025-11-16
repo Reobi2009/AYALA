@@ -1,0 +1,350 @@
+/* General Body & Header/Nav Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #004d40; /* Dark Teal */
+    color: white;
+    padding: 20px 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.nav-bar {
+    padding: 10px 0;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.nav-bar a:hover {
+    background-color: #00897b; /* Slightly Lighter Teal */
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 60px 20px;
+    min-height: 80vh;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.content-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; 
+}
+
+section h2 {
+    color: #004d40;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.final-cta {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* --- Slideshow Container Styles --- */
+.slideshow-container {
+    max-width: 800px; 
+    position: relative;
+    margin: 30px auto;
+    border: 5px solid #a1887f; /* Thematic border (Brownish Gray) */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff; 
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white; 
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.slide-number {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.slide-text {
+    color: #333;
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fbe9e7; /* Light terracotta/parchment */
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.slide-text h3 {
+    margin-top: 0;
+    color: #3e2723; /* Dark Brown */
+    font-size: 1.5em;
+}
+.slide-text p {
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* --- Form and List styles for Booking/Events --- */
+#booking form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#booking input[type="text"], 
+#booking input[type="date"],
+#booking input[type="email"],
+#booking input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #ff9800; /* Amber/Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #e65100; /* Darker Orange */
+}
+
+#events ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#events li {
+    background: #e0f2f1; /* Light Cyan */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #004d40;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* --- Puzzle (Learning Center) Styles (New and Cleaned) --- */
+#learning-center .content-section {
+    text-align: center; 
+}
+.instruction {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    padding: 0 15px;
+}
+
+#size-selector {
+    margin: 20px auto;
+}
+
+.size-button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 2px solid #004d40;
+    background-color: #e0f2f1;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.size-button:hover:not(.active) {
+    background-color: #b2dfdb;
+}
+
+.size-button.active {
+    background-color: #004d40;
+    color: white;
+}
+
+#puzzle-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--tile-size));
+    grid-template-rows: repeat(var(--grid-size), var(--tile-size));
+    gap: 0;
+    border: 5px solid #a1887f;
+    background-color: #d7ccc8;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: grab;
+}
+
+.tile.dragging {
+    opacity: 0.6;
+    transform: scale(0.95);
+}
+
+#play-sound {
+    margin: 30px auto;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+/* Basic themed styles for the learning center and puzzle */
+
+/* Layout */
+.content-section { max-width: 900px; margin: 0 auto; padding: 18px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.nav-bar a { margin-right: 10px; color:#333; text-decoration:none; }
+.instruction { color: #4e342e; }
+
+/* Controls / Buttons */
+.controls { margin: 12px 0; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.btn {
+  background: linear-gradient(180deg, #f1f1f1, #e0e0e0);
+  border: 1px solid #bdbdbd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+.btn.secondary {
+  background: #fff8e1;
+  border-color: #ffecb3;
+}
+
+/* Hint and status */
+.hint { margin-top:8px; font-weight:600; color:#2e7d32; }
+#status { color:#b71c1c; margin-top:6px; }
+
+/* Preview */
+#preview-wrapper { margin-top: 10px; }
+#puzzle-preview {
+  display: none; /* hidden until a puzzle loads */
+  max-width: 600px; /* cap preview size to avoid huge images */
+  width: 100%;
+  height: auto;
+  border: 2px dashed rgba(0,0,0,0.08);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Puzzle board / tiles */
+.puzzle-board { margin-top: 12px; }
+.tile { transition: box-shadow 120ms ease, transform 120ms ease; }
+.tile.dragging { opacity: 0.85; transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+/* Make sure canvas tiles are crisp on high-DPI displays */
+canvas.tile { image-rendering: -webkit-optimize-contrast; }

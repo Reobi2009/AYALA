@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Historical Park - Learning Center</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>🏛️ AYALA TRIAGLE 📜</h1>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Now / Appointment</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="learning_center.html">Learning Center (Puzzle)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="learning-center" class="content-section">
+            <h2>🧠 Puzzle Challenge: Assemble the Artifact 🧩</h2>
+            <p class="instruction">Recreate the historical image by dragging and dropping the pieces into their correct positions. Solve the puzzle to unlock a secret historical sound!</p>
+
+            <div class="controls">
+                <button class="btn" onclick="startPuzzle(4, 'puzzle.jpg')">Start 4x4 Puzzle</button>
+                <button class="btn" onclick="startPuzzle(5, 'puzzle2.png')">Start 5x5 Puzzle</button>
+                <button class="btn" onclick="startPuzzle(6, 'puzzle3.png')">Start 6x6 Puzzle</button>
+                <button id="togglePreview" class="btn secondary" onclick="togglePreview()">Toggle Guide</button>
+            </div>
+
+            <p id="puzzleHint" class="hint">Solve this puzzle to play the sound</p>
+            <div id="status" aria-live="polite"></div>
+
+            <!-- Guide/preview image (scaled to fit) -->
+            <div id="preview-wrapper">
+                <img id="puzzle-preview" alt="Puzzle guide preview" />
+            </div>
+
+            <div id="puzzle-container" class="puzzle-board" aria-label="Puzzle board"></div>
+            
+            <audio id="puzzleSound" src="sound.mp3"></audio>
+            <button id="playButton" class="btn" style="display:none;" onclick="document.getElementById('puzzleSound').play()">Play Sound</button>
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+    // Simple toggle for guide preview (visible after a puzzle is started)
+    function togglePreview() {
+        const p = document.getElementById('puzzle-preview');
+        if (!p.src) return; // nothing loaded yet
+        p.style.display = (p.style.display === 'none' || getComputedStyle(p).display === 'none') ? 'block' : 'none';
+    }
+
+    // When a puzzle is started we set the preview image and ensure hint is visible
+    // Modify startPuzzle to set #puzzle-preview.src (we will patch script.js below to set it)
+    </script>
+</body>
+</html>
